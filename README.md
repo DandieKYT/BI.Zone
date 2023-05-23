@@ -85,6 +85,12 @@ ${TASK}
 
 ![This is an image](design/pictures/telegram.jpg)
 
+<a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
+
+- <a name="Video1"><h3>Пример запуска тестов через selenoid</h3></a>
+
+https://github.com/DandieKYT/BI.Zone/blob/master/105ed23560eef6aacbe0e8161a7f9d19.mp4
+
 
 
 
