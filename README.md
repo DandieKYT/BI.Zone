@@ -83,7 +83,7 @@ ${TASK}
 
 <a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
 
-![This is an image](design/pictures/telegram.jpeg)
+![This is an image](design/pictures/telegram.jpg)
 
 
 
