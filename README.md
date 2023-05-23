@@ -48,6 +48,9 @@
  
  :card_index_dividers: Чтение и проверка содержимого PDF файла
  </br>
+ 
+ <h1>Сборка в Jenkins</br> 
+ ![This is an image](design/pictures/jenkins.png)
 
 <a name="Launch_from_terminal"><h2>:computer: Запуск из терминала</h2></a>
 
