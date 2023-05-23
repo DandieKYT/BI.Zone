@@ -63,13 +63,8 @@ gradle clean test
 
 ```
 
-clean
-${TASK}
--Dbrowser=${BROWSER}
--Dbrowser_version=${BROWSER_VERSION}
--Dbrowser_size=${BROWSER_SIZE}
--Dbaseurl=${BASEURL}
--Dselenoid_url=${SELENOID_URL}
+clean test
+
 ```
 <a name="Allure_report"><h2>:chart_with_downwards_trend: Allure отчет</h2></a>
 
