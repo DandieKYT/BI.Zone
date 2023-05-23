@@ -48,7 +48,7 @@
  :card_index_dividers: Чтение и проверка содержимого PDF файла
  </br>
  
- <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/BIZONE/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)<h2></a>
+ <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/BIZONE/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/BIZONE/)<h2></a>
 
 ![This is an image](design/pictures/jenkins.png)
 
