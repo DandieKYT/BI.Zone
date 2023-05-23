@@ -12,11 +12,6 @@
 + [:chart_with_downwards_trend: Allure отчет](#Allure_report)
     + [Главный экран отчета](#Allure_report1)
     + [Страница с проведенными тестами](#Allure_report2)
-+ [:bar_chart: Интеграция с Allure TestOps](#Integration_Allure_TestOps)
-    + [Экран с результатами запуска тестов](#Интеграция_с_Allure_TestOps1)
-    + [Страница с тестами в TestOps](#Интеграция_с_Allure_TestOps2)
-+ [:chart_with_upwards_trend: Интеграция с Jira](#Integration_Jira)
-+ [Страница с задачей в Jira](#Page_Jira)
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
 
