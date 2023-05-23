@@ -49,6 +49,37 @@
  :card_index_dividers: Чтение и проверка содержимого PDF файла
  </br>
 
+<a name="Launch_from_terminal"><h2>:computer: Запуск из терминала</h2></a>
+
+Локальный запуск:
+
+```
+
+gradle clean test
+
+```
+
+Удаленный запуск:
+
+```
+
+clean
+${TASK}
+-Dbrowser=${BROWSER}
+-Dbrowser_version=${BROWSER_VERSION}
+-Dbrowser_size=${BROWSER_SIZE}
+-Dbaseurl=${BASEURL}
+-Dselenoid_url=${SELENOID_URL}
+```
+<a name="Allure_report"><h2>:chart_with_downwards_trend: Allure отчет</h2></a>
+
+- <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
+
+![This is an image](design/pictures/allure.jpeg)
+
+-  <a name="Allure_report2"><h3>Страница с проведенными тестами</h3></a>
+
+![This is an image](design/pictures/allure1.jpeg)
 
 
 
