@@ -79,7 +79,8 @@ clean test
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
 - <a name="Video1"><h3>Пример запуска тестов через selenoid</h3></a>
-https://github.com/DandieKYT/BI.Zone/issues/1#issue-1722484149
+
+https://github.com/DandieKYT/BI.Zone/assets/75677738/545e62ec-6c15-4db3-949a-98b56a97b20b
 
 
 
