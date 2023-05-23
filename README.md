@@ -75,11 +75,11 @@ ${TASK}
 
 - <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
 
-![This is an image](design/pictures/allure.jpeg)
+![This is an image](design/pictures/allure1.png)
 
 -  <a name="Allure_report2"><h3>Страница с проведенными тестами</h3></a>
 
-![This is an image](design/pictures/allure1.jpeg)
+![This is an image](design/pictures/allure2.png)
 
 
 
