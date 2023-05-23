@@ -51,13 +51,6 @@
 
 <a name="Launch_from_terminal"><h2>:computer: Запуск из терминала</h2></a>
 
-Локальный запуск:
-
-```
-
-gradle clean test
-
-```
 
 Удаленный запуск:
 
