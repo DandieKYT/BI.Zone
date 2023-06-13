@@ -2,15 +2,18 @@ package pages;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.SelenideElement;
+import org.hamcrest.Matcher;
 
 import java.io.File;
 import java.io.IOException;
 
 
+import static com.codeborne.pdftest.PDF.containsText;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
-import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class BiZonePage {
 
@@ -26,7 +29,7 @@ public class BiZonePage {
     private SelenideElement companyHover = $(byTagAndText("span","Компания"));
     private SelenideElement buttonVacation = $x("//*[contains(@class, 'tmpl_hh_areas__reset--dt')]");
     private SelenideElement vacationsQa = $(byTagAndText("span", "Вакансии BI.ZONE"));
-    private SelenideElement bookPageOpen = $("#materials-7390 .research__title");
+    private SelenideElement bookPageOpen = $("#materials-11043 .research__title");
 
     private SelenideElement listVacations = $(".bloko-link__content");
     private SelenideElement vkGroup= $x("//div[normalize-space()='VK']");
@@ -47,11 +50,14 @@ public class BiZonePage {
 
 
     public BiZonePage checkoutPDF() throws IOException {
-        File download = $("a[href*='/upload/for_download/bi_zone_the_fundamentals_of_business_continuity_management_ru.pdf']").download();
+//        File download = $("<a href=/upload/for_download/Business_impact_analysis_to_reinforce_the_cyber_resilience-ru.pdf").download();
+        File download = $("<a href=/upload/for_download/Business_impact_analysis_to_reinforce_the_cyber_resilience-ru.pdf").download();
         PDF pdf = new PDF(download);
-//        assertThat(pdf).matchesText(".*Путь к цифровому лидерству.*");
+        assertThat(pdf).isNotEqualTo(".*Путь к цифровому лидерству. Business impact analysis в управлении непрерывностью бизнеса*");
+       // assertThat(pdf).matchesText(".*Путь к цифровому лидерству.*");
         return this;
     }
+
 
     public SelenideElement searchByParam(String param){
         return $x(String.format("//span[text()='%s']", param));

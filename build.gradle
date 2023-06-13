@@ -35,7 +35,7 @@ repositories {
 dependencies {
     testImplementation (
             'org.junit.jupiter:junit-jupiter:5.9.2',
-            'com.codeborne:selenide:6.12.3',
+            'com.codeborne:selenide:6.14.0',
             'com.codeborne:pdf-test:1.5.0',
             'com.codeborne:xls-test:1.4.3',
             'com.fasterxml.jackson.core:jackson-core:2.13.1',

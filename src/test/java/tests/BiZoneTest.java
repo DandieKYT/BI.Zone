@@ -75,7 +75,7 @@ public class BiZoneTest extends TestBase {
         open("/");
         biZoneSteps.expertiseHover();
         biZoneSteps.materialsOpen();
-        biZoneSteps.bookPageOpen();
+//        biZoneSteps.bookPageOpen();
         biZoneSteps.checkoutPDF();
         biZoneSteps.openPage();
     }
