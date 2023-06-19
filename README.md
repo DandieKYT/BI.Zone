@@ -93,7 +93,8 @@ clean test
  <a name="ManualTest"><h3>Страница с тестами в TestOps</h3></a>
     
     
-![Screenshot_3](https://github.com/DandieKYT/BI.Zone/assets/75677738/b8f9f088-4c8c-4b40-87f5-e15e72e4d42d)
+![Screenshot_5](https://github.com/DandieKYT/BI.Zone/assets/75677738/7916cdb3-b2ce-431e-b3b8-47701d348bee)
+
 
 
 <a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
