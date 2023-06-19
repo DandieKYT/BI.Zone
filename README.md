@@ -107,4 +107,8 @@ clean test
     <h1><a href="https://selenoid.autotests.cloud/video/e3e723968a6e10d3b7d8bb4f5b7eb525.mp4">Открытие страниц Карьера/Материалы<br>
   
 
-https://github.com/DandieKYT/BI.Zone/assets/75677738/fcf4b250-3c9a-4302-a56e-05006cf3e2f4
+
+https://github.com/DandieKYT/BI.Zone/assets/75677738/47b49330-9d56-4e35-97f9-0ba8ec246b44
+
+
+
