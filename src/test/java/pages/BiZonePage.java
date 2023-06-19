@@ -17,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BiZonePage {
 
+
     private SelenideElement materialsOpen =  $(byTagAndText("a", "Материалы"));
 
     private SelenideElement openСareer = $x("//a[@class='submenu__link'][contains(text(),'Карьера')]");

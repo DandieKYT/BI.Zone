@@ -106,6 +106,7 @@ public class BiZoneSteps {
     public void getVkGroup() {
         biZonePage.getVkGroup().click();
         switchTo().window(2);
+
     }
 
     @Step("Проверка названия в группе ВК")
