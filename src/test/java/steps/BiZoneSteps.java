@@ -93,25 +93,30 @@ public class BiZoneSteps {
 
     @Step("Открытие страницы с книгой")
     public void bookPageOpen() {
+       $x("//*[contains(@class, 'catalog__input')]").setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса").pressEnter();
         biZonePage.bookPageOpen().click();
-        switchTo().window(2);
+        switchTo().window(1);
     }
 
     @Step("Скачивание PDF файла, и его проверка")
     public void checkoutPDF() throws IOException {
         biZonePage.checkoutPDF();
+        Selenide.closeWindow();
+        switchTo().window(0);
     }
 
     @Step("Открытие группы ВК")
     public void getVkGroup() {
         biZonePage.getVkGroup().click();
-        switchTo().window(2);
+        switchTo().window(1);
 
     }
 
     @Step("Проверка названия в группе ВК")
     public void getExpectedTitleVk() {
         biZonePage.getExpectedTitleVk().shouldBe(text("BI.ZONE"));
+        Selenide.closeWindow();
+        switchTo().window(0);
     }
 
     @Step("Наведение на название Компания")
@@ -143,6 +148,8 @@ public class BiZoneSteps {
     @Step("Проверка наличия вакансии \"Тестировщик\"")
     public void checkoutVacationQa() {
         biZonePage.checkoutVacationQa().shouldBe(Condition.visible);
+        Selenide.closeWindow();
+        switchTo().window(0);
     }
 
     @Step("Получение логов браузера")

@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import steps.BiZoneSteps;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 
 @Tag("remote_test")
 public class BiZoneTest extends TestBase {
@@ -38,7 +39,6 @@ public class BiZoneTest extends TestBase {
     public void productsResult() {
         open("/");
         biZoneSteps.openProducts();
-        biZoneSteps.closeCookie();
         biZoneSteps.checkBoxLocal();
         biZoneSteps.checkBoxHome();
         biZoneSteps.expectedProducts();
@@ -52,6 +52,7 @@ public class BiZoneTest extends TestBase {
         open("/");
         biZoneSteps.getVkGroup();
         biZoneSteps.getExpectedTitleVk();
+
     }
 
     @Test
@@ -73,12 +74,11 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
         open("/");
+        biZoneSteps.closeCookie();
         biZoneSteps.expertiseHover();
         biZoneSteps.materialsOpen();
         biZoneSteps.bookPageOpen();
         biZoneSteps.checkoutPDF();
-        biZoneSteps.openPage();
-
     }
 }
 
