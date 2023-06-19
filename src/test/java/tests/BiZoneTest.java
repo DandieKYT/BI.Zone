@@ -23,7 +23,7 @@ public class BiZoneTest extends TestBase {
     @Feature("Материалы и Карьера")
     @Story("Открытие страниц Материалы и Карьера")
     @ParameterizedTest
-    public void careerAndCompany(String param, String expectedText){
+    public void careerAndCompany(String param, String expectedText) {
         open("/");
         biZoneSteps.searchByParam(param);
         biZoneSteps.openTitle(expectedText);
@@ -35,7 +35,7 @@ public class BiZoneTest extends TestBase {
     @Feature("Соответствие результатов выдачи во вкладке продукты")
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
-    public void productsResult(){
+    public void productsResult() {
         open("/");
         biZoneSteps.openProducts();
         biZoneSteps.closeCookie();
@@ -58,7 +58,7 @@ public class BiZoneTest extends TestBase {
     @Owner("Kudryavtsev")
     @Feature("Вакансии тестировщика на HH.ru")
     @Story("Проверка вакансии на сайте")
-    public void vacationQa(){
+    public void vacationQa() {
         open("/");
         biZoneSteps.companyHover();
         biZoneSteps.openСareer();
@@ -66,8 +66,8 @@ public class BiZoneTest extends TestBase {
         biZoneSteps.buttonVacation();
         biZoneSteps.checkoutVacationQa();
     }
+
     @Test
-    @Disabled
     @Owner("Kudryavtsev")
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
@@ -75,8 +75,10 @@ public class BiZoneTest extends TestBase {
         open("/");
         biZoneSteps.expertiseHover();
         biZoneSteps.materialsOpen();
-//        biZoneSteps.bookPageOpen();
+        biZoneSteps.bookPageOpen();
         biZoneSteps.checkoutPDF();
         biZoneSteps.openPage();
+
     }
 }
+
