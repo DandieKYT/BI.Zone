@@ -12,12 +12,6 @@ public class VkPage {
     private SelenideElement
             getExpectedTitleVk = $x("//h1[normalize-space()='BI.ZONE']");
 
-    public VkPage vkGroup() {
-        step("Открыть группу VK", () -> {
-            vkGroup.click();
-        });
-        return this;
-    }
     public VkPage getExpectedTitleVk() {
         step("Проверить содержимое страницы группы", () -> {
             getExpectedTitleVk.shouldBe(text("BI.ZONE"));

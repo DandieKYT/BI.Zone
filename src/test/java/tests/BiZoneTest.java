@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import pages.MainPage;
 import pages.VkPage;
 import steps.BiZoneSteps;
 
@@ -17,6 +18,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class BiZoneTest extends TestBase {
     BiZoneSteps biZoneSteps = new BiZoneSteps();
     VkPage vkPage = new VkPage();
+    MainPage mainPage = new MainPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -27,7 +29,7 @@ public class BiZoneTest extends TestBase {
     @Story("Открытие страниц Материалы и Карьера")
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
-        open("/");
+        mainPage.openPage();
         biZoneSteps.searchByParam(param);
         biZoneSteps.openTitle(expectedText);
         biZoneSteps.checkTile(expectedText);
@@ -39,7 +41,7 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
     public void productsResult() {
-        open("/");
+        mainPage.openPage();
         biZoneSteps.openProducts();
         biZoneSteps.checkBoxLocal();
         biZoneSteps.checkBoxHome();
@@ -51,9 +53,9 @@ public class BiZoneTest extends TestBase {
     @Feature("Переход на официальную страницу группы компании в ВК")
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
-        open("/");
-        biZoneSteps.getVkGroup();
-        biZoneSteps.getExpectedTitleVk();
+        mainPage.openPage();
+        mainPage.vkGroup();
+        vkPage.getExpectedTitleVk();
 
     }
 
@@ -62,8 +64,8 @@ public class BiZoneTest extends TestBase {
     @Feature("Вакансии тестировщика на HH.ru")
     @Story("Проверка вакансии на сайте")
     public void vacationQa() {
-        open("/");
-        biZoneSteps.closeCookie();
+        mainPage.openPage();
+        mainPage.closeCookie();
         biZoneSteps.companyHover();
         biZoneSteps.openСareer();
         biZoneSteps.vacationsQa();
@@ -76,7 +78,7 @@ public class BiZoneTest extends TestBase {
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
-        open("/");
+        mainPage.openPage();
         biZoneSteps.expertiseHover();
         biZoneSteps.materialsOpen();
         biZoneSteps.bookPageOpen();

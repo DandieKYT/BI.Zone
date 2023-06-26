@@ -27,12 +27,6 @@ public class BiZoneSteps {
         startPage.searchByParam(param).hover();
     }
 
-    @Step("Открытие сайта")
-    public BiZoneSteps openPage() {
-        Selenide.open("https://bi.zone/");
-        return this;
-    }
-
     @Step("Скриншот теста")
     public void attachScreenshot(int number) {
         $(withText("#" + number)).should(Condition.visible);
@@ -49,11 +43,6 @@ public class BiZoneSteps {
     @Step("Открытие вкладки продукты")
     public void openProducts() {
         startPage.openProducts().click();
-    }
-
-    @Step("Закрытие уведомления cookie")
-    public void closeCookie() {
-        startPage.closeCookie().click();
     }
 
     @Step("Ставим отметку в чек-бокс в Локальное")
@@ -103,13 +92,6 @@ public class BiZoneSteps {
         startPage.checkoutPDF();
         Selenide.closeWindow();
         switchTo().window(0);
-    }
-
-    @Step("Открытие группы ВК")
-    public void getVkGroup() {
-        startPage.getVkGroup().click();
-        switchTo().window(1);
-
     }
 
     @Step("Проверка названия в группе ВК")

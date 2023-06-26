@@ -59,9 +59,5 @@ public class StartPage {
     public SelenideElement expectedProducts(){return expectedProducts;}
     public SelenideElement checkBoxHome(){return checkBoxHome;}
     public SelenideElement checkBoxLocal(){ return checkBoxLocal;}
-    public SelenideElement closeCookie(){ return  closeCookie;}
-    public SelenideElement openProducts() {
-        return openProducts;
-    }
-    public SelenideElement expertiseHover(){return  expertiseHover;}
+
 }
