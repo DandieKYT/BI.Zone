@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import pages.MainPage;
-import pages.ProductPage;
-import pages.VkPage;
+import pages.*;
 import steps.BiZoneSteps;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -21,6 +19,9 @@ public class BiZoneTest extends TestBase {
     VkPage vkPage = new VkPage();
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
+    CareerPage careerPage = new CareerPage();
+    HhPage hhPage = new HhPage();
+    MaterialsPage materialsPage = new MaterialsPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -70,9 +71,9 @@ public class BiZoneTest extends TestBase {
         mainPage.closeCookie();
         mainPage.companyHover();
         mainPage.openСareer();
-        biZoneSteps.vacationsQa();
-        biZoneSteps.buttonVacation();
-        biZoneSteps.checkoutVacationQa();
+        careerPage.vacationsQa();
+        hhPage.buttonVacation();
+        hhPage.checkoutVacationQa();
     }
 
     @Test
@@ -83,8 +84,10 @@ public class BiZoneTest extends TestBase {
         mainPage.openPage();
         mainPage.expertiseHover();
         mainPage.materialsOpen();
-        biZoneSteps.bookPageOpen();
-        biZoneSteps.checkoutPDF();
+        materialsPage.findBook();
+        materialsPage.bookPageOpen();
+        materialsPage.checkoutPDF();
+        materialsPage.closeAfterPDF();
     }
 }
 

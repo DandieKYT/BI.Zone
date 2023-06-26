@@ -49,49 +49,11 @@ public class BiZoneSteps {
         startPage.checkTile(expectedText).shouldBe(text(expectedText));
     }
 
-
-    @Step("Открытие страницы с книгой")
-    public void bookPageOpen() {
-       $x("//*[contains(@class, 'catalog__input')]").setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса").pressEnter();
-        startPage.bookPageOpen().click();
-        switchTo().window(1);
-    }
-
-    @Step("Скачивание PDF файла, и его проверка")
-    public void checkoutPDF() throws IOException {
-        startPage.checkoutPDF();
-        Selenide.closeWindow();
-        switchTo().window(0);
-    }
-
-    @Step("Проверка названия в группе ВК")
-    public void getExpectedTitleVk() {
-        startPage.getExpectedTitleVk().shouldBe(text("BI.ZONE"));
-        Selenide.closeWindow();
-        switchTo().window(0);
-    }
-    @Step("Открытие страницы Вакансии")
-    public void vacationsQa() {
-        startPage.vacationsQa().click();
-        switchTo().window(1);
-    }
-
-    @Step("Нажатие на кнопку \"Работа в BI.ZONE\"")
-    public void buttonVacation() {
-        startPage.buttonVacation().click();
-    }
-
     @Step("Открытие списка вакасий")
     public void listVacations() {
         startPage.listVacations().click();
     }
 
-    @Step("Проверка наличия вакансии \"Тестировщик\"")
-    public void checkoutVacationQa() {
-        startPage.checkoutVacationQa().shouldBe(Condition.visible);
-        Selenide.closeWindow();
-        switchTo().window(0);
-    }
 
     @Step("Получение логов браузера")
     @Attachment(value = "{attachName}", type = "text/plain")
