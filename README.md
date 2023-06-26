@@ -44,28 +44,28 @@
 `Allure Report` - для визуализации результатов тестирования.\
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - система управления тестированием.
- 
- <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
- 
- :clipboard: Наличие вакансии тестировщика на <a href = "https://spb.hh.ru/employer/2367681?roistat_visit=633908">HH </br>
- 
- :speech_balloon: Переход на официальную страницу компании в <a href = "https://vk.com/bi_zone_vk?roistat_visit=633908">ВК
-  </br>
- 
- :clipboard: Открытие страниц <a href = "https://bi.zone/about/career/">Карьера</a>/<a href = "https://bi.zone/expertise/research/">Материалы</a>
+
+<a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
+
+:clipboard: Наличие вакансии тестировщика на <a href = "https://spb.hh.ru/employer/2367681?roistat_visit=633908">HH </br>
+
+:speech_balloon: Переход на официальную страницу компании в <a href = "https://vk.com/bi_zone_vk?roistat_visit=633908">ВК
+</br>
+
+:clipboard: Открытие страниц <a href = "https://bi.zone/about/career/">Карьера</a>/<a href = "https://bi.zone/expertise/research/">Материалы</a>
 </br>
 
 🔎 Соответствие результатов выдачи во вкладке<a href = "https://bi.zone/catalog/"> "Продукты"
 </br>
- 
- :card_index_dividers: Чтение и проверка содержимого PDF файла <a href = "https://bi.zone/upload/for_download/bi_zone_the_fundamentals_of_business_continuity_management_ru.pdf">"Путь к цифровому лидерству. Основы управления непрерывностью бизнеса".<a/>
- </br>
- 
- <a name="Project"><h2>Проект</h2></a>
+
+:card_index_dividers: Чтение и проверка содержимого PDF файла <a href = "https://bi.zone/upload/for_download/bi_zone_the_fundamentals_of_business_continuity_management_ru.pdf">"Путь к цифровому лидерству. Основы управления непрерывностью бизнеса".<a/>
+</br>
+
+<a name="Project"><h2>Проект</h2></a>
 <a href="https://bi.zone/"><code><img width="5%" title="BI.ZONE" src="https://www.connect-wit.ru/wp-content/uploads/2020/03/BI.ZONE-logo_Cybersecurity_RGB_SQ_Light-Blue.png"></code></a> Проект по автоматизации тестирования для <a target="_blank" href="https://bi.zone/">BI.ZONE</a> — компания по управлению цифровыми рисками.
- :star2:
- 
- <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/BIZONE/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/BIZONE/)<h2></a>
+:star2:
+
+<a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/BIZONE/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/BIZONE/)<h2></a>
 
 ![This is an image](design/pictures/jenkins.png)
 
@@ -86,14 +86,9 @@ clean test
 -  <a name="Allure_report2"><h3>Страница с проведенными тестами</h3></a>
 
 ![This is an image](design/pictures/allure2.png)
-    
+
 <a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure TestOps</h2></a>
-    
-   
- <a name="ManualTest"><h3>Страница с тестами в TestOps</h3></a>
-    
-    
-![Screenshot_5](https://github.com/DandieKYT/BI.Zone/assets/75677738/7916cdb3-b2ce-431e-b3b8-47701d348bee)
+
 
 
 
@@ -105,10 +100,6 @@ clean test
 
 - <a name="Video1"><h3>Пример запуска тестов через selenoid</h3></a>
     <h1><a href="https://selenoid.autotests.cloud/video/e3e723968a6e10d3b7d8bb4f5b7eb525.mp4">Открытие страниц Карьера/Материалы<br>
-  
-
-
-https://github.com/DandieKYT/BI.Zone/assets/75677738/47b49330-9d56-4e35-97f9-0ba8ec246b44
 
 
 
