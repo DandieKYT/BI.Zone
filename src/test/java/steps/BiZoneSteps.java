@@ -39,27 +39,6 @@ public class BiZoneSteps {
         return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
-
-    @Step("Открытие вкладки продукты")
-    public void openProducts() {
-        startPage.openProducts().click();
-    }
-
-    @Step("Ставим отметку в чек-бокс в Локальное")
-    public void checkBoxLocal() {
-        startPage.checkBoxLocal().click();
-    }
-
-    @Step("Ставим отметку в чек-бокс в Реестр отечественного ПО")
-    public void checkBoxHome() {
-        startPage.checkBoxHome().click();
-    }
-
-    @Step("Проверка на соответсвие количества результатов")
-    public void expectedProducts() {
-        startPage.expectedProducts().shouldHave(text("7 результатов"));
-    }
-
     @Step("Открытие вкладки")
     public void openTitle(String expectedText) {
         startPage.openTitle(expectedText).click();
@@ -70,15 +49,6 @@ public class BiZoneSteps {
         startPage.checkTile(expectedText).shouldBe(text(expectedText));
     }
 
-    @Step("Наведение курсора на название Экспертиза")
-    public void expertiseHover() {
-        startPage.expertiseHover().hover();
-    }
-
-    @Step("Открытие страницы материалы")
-    public void materialsOpen() {
-        startPage.materialsOpen().click();
-    }
 
     @Step("Открытие страницы с книгой")
     public void bookPageOpen() {
@@ -100,17 +70,6 @@ public class BiZoneSteps {
         Selenide.closeWindow();
         switchTo().window(0);
     }
-
-    @Step("Наведение на название Компания")
-    public void companyHover() {
-        startPage.companyHover().hover();
-    }
-
-    @Step("Открытие страницы Карьера")
-    public void openСareer() {
-        startPage.openСareer().click();
-    }
-
     @Step("Открытие страницы Вакансии")
     public void vacationsQa() {
         startPage.vacationsQa().click();

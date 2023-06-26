@@ -36,5 +36,35 @@ public class MainPage {
         });
         return this;
     }
+    public MainPage materialsOpen(){
+        step("Открытие страницы материалы",() -> {
+            materialsOpen.click();
+        });
+        return this;
+    }
+    public MainPage openСareer(){
+        step("Открытие страницы Карьера",() -> {
+            openСareer.click();
+        });
+        return this;
+    }
+    public MainPage openProducts(){
+        step("Открытие страницы Продукты",() -> {
+            openProducts.click();
+        });
+        return this;
+    }
+    public MainPage expertiseHover(){
+        step("Наведение курсора на название Экспертиза",() -> {
+            expertiseHover.hover();
+        });
+        return this;
+    }
+    public MainPage companyHover(){
+        step("Наведение на название Компания",() -> {
+            companyHover.hover();
+        });
+        return this;
+    }
 
 }

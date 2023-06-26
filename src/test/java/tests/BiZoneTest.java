@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.MainPage;
+import pages.ProductPage;
 import pages.VkPage;
 import steps.BiZoneSteps;
 
@@ -19,6 +20,7 @@ public class BiZoneTest extends TestBase {
     BiZoneSteps biZoneSteps = new BiZoneSteps();
     VkPage vkPage = new VkPage();
     MainPage mainPage = new MainPage();
+    ProductPage productPage = new ProductPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -42,10 +44,10 @@ public class BiZoneTest extends TestBase {
     @Tag("api_allure")
     public void productsResult() {
         mainPage.openPage();
-        biZoneSteps.openProducts();
-        biZoneSteps.checkBoxLocal();
-        biZoneSteps.checkBoxHome();
-        biZoneSteps.expectedProducts();
+        mainPage.openProducts();
+        productPage.checkBoxLocal();
+        productPage.checkBoxHome();
+        productPage.expectedProducts();
     }
 
     @Test
@@ -66,8 +68,8 @@ public class BiZoneTest extends TestBase {
     public void vacationQa() {
         mainPage.openPage();
         mainPage.closeCookie();
-        biZoneSteps.companyHover();
-        biZoneSteps.openСareer();
+        mainPage.companyHover();
+        mainPage.openСareer();
         biZoneSteps.vacationsQa();
         biZoneSteps.buttonVacation();
         biZoneSteps.checkoutVacationQa();
@@ -79,8 +81,8 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
         mainPage.openPage();
-        biZoneSteps.expertiseHover();
-        biZoneSteps.materialsOpen();
+        mainPage.expertiseHover();
+        mainPage.materialsOpen();
         biZoneSteps.bookPageOpen();
         biZoneSteps.checkoutPDF();
     }
