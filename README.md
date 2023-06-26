@@ -90,11 +90,6 @@ clean test
 <a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure TestOps</h2></a>
 
 
-<a name="ManualTest"><h3>Страница с тестами в TestOps</h3></a>
-
-
-![Screenshot_5](https://github.com/DandieKYT/BI.Zone/assets/75677738/7916cdb3-b2ce-431e-b3b8-47701d348bee)
-
 
 
 <a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
@@ -107,6 +102,4 @@ clean test
     <h1><a href="https://selenoid.autotests.cloud/video/e3e723968a6e10d3b7d8bb4f5b7eb525.mp4">Открытие страниц Карьера/Материалы<br>
 
 
-
-https://github.com/DandieKYT/BI.Zone/assets/75677738/47b49330-9d56-4e35-97f9-0ba8ec246b44
 
