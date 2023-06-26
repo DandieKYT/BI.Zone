@@ -6,7 +6,7 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import pages.BiZonePage;
+import pages.StartPage;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -20,11 +20,11 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class BiZoneSteps {
-    BiZonePage biZonePage = new BiZonePage();
+    StartPage startPage = new StartPage();
 
     @Step("Открытие верхнего меню")
     public void searchByParam(String param) {
-        biZonePage.searchByParam(param).hover();
+        startPage.searchByParam(param).hover();
     }
 
     @Step("Открытие сайта")
@@ -48,106 +48,106 @@ public class BiZoneSteps {
 
     @Step("Открытие вкладки продукты")
     public void openProducts() {
-        biZonePage.openProducts().click();
+        startPage.openProducts().click();
     }
 
     @Step("Закрытие уведомления cookie")
     public void closeCookie() {
-        biZonePage.closeCookie().click();
+        startPage.closeCookie().click();
     }
 
     @Step("Ставим отметку в чек-бокс в Локальное")
     public void checkBoxLocal() {
-        biZonePage.checkBoxLocal().click();
+        startPage.checkBoxLocal().click();
     }
 
     @Step("Ставим отметку в чек-бокс в Реестр отечественного ПО")
     public void checkBoxHome() {
-        biZonePage.checkBoxHome().click();
+        startPage.checkBoxHome().click();
     }
 
     @Step("Проверка на соответсвие количества результатов")
     public void expectedProducts() {
-        biZonePage.expectedProducts().shouldHave(text("7 результатов"));
+        startPage.expectedProducts().shouldHave(text("7 результатов"));
     }
 
     @Step("Открытие вкладки")
     public void openTitle(String expectedText) {
-        biZonePage.openTitle(expectedText).click();
+        startPage.openTitle(expectedText).click();
     }
 
     @Step("Проверка открытия вкладки")
     public void checkTile(String expectedText) {
-        biZonePage.checkTile(expectedText).shouldBe(text(expectedText));
+        startPage.checkTile(expectedText).shouldBe(text(expectedText));
     }
 
     @Step("Наведение курсора на название Экспертиза")
     public void expertiseHover() {
-        biZonePage.expertiseHover().hover();
+        startPage.expertiseHover().hover();
     }
 
     @Step("Открытие страницы материалы")
     public void materialsOpen() {
-        biZonePage.materialsOpen().click();
+        startPage.materialsOpen().click();
     }
 
     @Step("Открытие страницы с книгой")
     public void bookPageOpen() {
        $x("//*[contains(@class, 'catalog__input')]").setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса").pressEnter();
-        biZonePage.bookPageOpen().click();
+        startPage.bookPageOpen().click();
         switchTo().window(1);
     }
 
     @Step("Скачивание PDF файла, и его проверка")
     public void checkoutPDF() throws IOException {
-        biZonePage.checkoutPDF();
+        startPage.checkoutPDF();
         Selenide.closeWindow();
         switchTo().window(0);
     }
 
     @Step("Открытие группы ВК")
     public void getVkGroup() {
-        biZonePage.getVkGroup().click();
+        startPage.getVkGroup().click();
         switchTo().window(1);
 
     }
 
     @Step("Проверка названия в группе ВК")
     public void getExpectedTitleVk() {
-        biZonePage.getExpectedTitleVk().shouldBe(text("BI.ZONE"));
+        startPage.getExpectedTitleVk().shouldBe(text("BI.ZONE"));
         Selenide.closeWindow();
         switchTo().window(0);
     }
 
     @Step("Наведение на название Компания")
     public void companyHover() {
-        biZonePage.companyHover().hover();
+        startPage.companyHover().hover();
     }
 
     @Step("Открытие страницы Карьера")
     public void openСareer() {
-        biZonePage.openСareer().click();
+        startPage.openСareer().click();
     }
 
     @Step("Открытие страницы Вакансии")
     public void vacationsQa() {
-        biZonePage.vacationsQa().click();
+        startPage.vacationsQa().click();
         switchTo().window(1);
     }
 
     @Step("Нажатие на кнопку \"Работа в BI.ZONE\"")
     public void buttonVacation() {
-        biZonePage.buttonVacation().click();
+        startPage.buttonVacation().click();
     }
 
     @Step("Открытие списка вакасий")
     public void listVacations() {
-        biZonePage.listVacations().click();
+        startPage.listVacations().click();
     }
 
     @Step("Проверка наличия вакансии \"Тестировщик\"")
     public void checkoutVacationQa() {
-        biZonePage.checkoutVacationQa().shouldBe(Condition.visible);
+        startPage.checkoutVacationQa().shouldBe(Condition.visible);
         Selenide.closeWindow();
         switchTo().window(0);
     }

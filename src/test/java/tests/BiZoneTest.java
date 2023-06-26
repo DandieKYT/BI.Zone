@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import pages.VkPage;
 import steps.BiZoneSteps;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 @Tag("remote_test")
 public class BiZoneTest extends TestBase {
     BiZoneSteps biZoneSteps = new BiZoneSteps();
+    VkPage vkPage = new VkPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -61,6 +63,7 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка вакансии на сайте")
     public void vacationQa() {
         open("/");
+        biZoneSteps.closeCookie();
         biZoneSteps.companyHover();
         biZoneSteps.openСareer();
         biZoneSteps.vacationsQa();
@@ -74,7 +77,6 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
         open("/");
-        biZoneSteps.closeCookie();
         biZoneSteps.expertiseHover();
         biZoneSteps.materialsOpen();
         biZoneSteps.bookPageOpen();
