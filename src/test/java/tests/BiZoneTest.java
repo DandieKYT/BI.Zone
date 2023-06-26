@@ -2,26 +2,22 @@ package tests;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.*;
-import steps.BiZoneSteps;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
 
 @Tag("remote_test")
 public class BiZoneTest extends TestBase {
-    BiZoneSteps biZoneSteps = new BiZoneSteps();
     VkPage vkPage = new VkPage();
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
     CareerPage careerPage = new CareerPage();
     HhPage hhPage = new HhPage();
     MaterialsPage materialsPage = new MaterialsPage();
+    ParamPage paramPage = new ParamPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -33,9 +29,9 @@ public class BiZoneTest extends TestBase {
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
         mainPage.openPage();
-        biZoneSteps.searchByParam(param);
-        biZoneSteps.openTitle(expectedText);
-        biZoneSteps.checkTile(expectedText);
+        paramPage.searchByParam(param);
+        paramPage.openTitle(expectedText);
+        paramPage.checkTile(expectedText);
     }
 
     @Test

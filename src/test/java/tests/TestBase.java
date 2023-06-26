@@ -1,16 +1,19 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import steps.BiZoneSteps;
+import pages.Attachments;
+
 
 import java.util.Map;
 
 
 public class TestBase {
-    BiZoneSteps biZoneSteps = new BiZoneSteps();
+
+    Attachments attachment = new Attachments();
     @BeforeAll
     static void setUp() {
     Configuration.browserSize = "1920x1080";
@@ -30,10 +33,10 @@ public class TestBase {
     }
         @AfterEach
         void attachemts(){
-            biZoneSteps.browserLogs();
-            biZoneSteps.attachScreenshot();
-            biZoneSteps.pageSource();
-            biZoneSteps.addVideo();
+            attachment.browserLogs();
+            attachment.attachScreenshot();
+            attachment.pageSource();
+            attachment.addVideo();
         }
     }
 
