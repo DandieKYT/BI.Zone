@@ -56,6 +56,7 @@ public class BiZoneTest extends TestBase {
         mainPage.vkGroup();
         vkPage.getExpectedTitleVk();
 
+
     }
 
     @Test
