@@ -11,13 +11,6 @@ import pages.*;
 
 @Tag("remote_test")
 public class BiZoneTest extends TestBase {
-    VkPage vkPage = new VkPage();
-    MainPage mainPage = new MainPage();
-    ProductPage productPage = new ProductPage();
-    CareerPage careerPage = new CareerPage();
-    HhPage hhPage = new HhPage();
-    MaterialsPage materialsPage = new MaterialsPage();
-    ParamPage paramPage = new ParamPage();
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",

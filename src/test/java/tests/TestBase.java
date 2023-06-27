@@ -5,14 +5,20 @@ import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.Attachments;
+import pages.*;
 
 
 import java.util.Map;
 
 
 public class TestBase {
-
+    VkPage vkPage = new VkPage();
+    MainPage mainPage = new MainPage();
+    ProductPage productPage = new ProductPage();
+    CareerPage careerPage = new CareerPage();
+    HhPage hhPage = new HhPage();
+    MaterialsPage materialsPage = new MaterialsPage();
+    ParamPage paramPage = new ParamPage();
     Attachments attachment = new Attachments();
     @BeforeAll
     static void setUp() {
