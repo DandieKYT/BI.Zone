@@ -8,15 +8,8 @@ import static io.qameta.allure.Allure.step;
 
 public class CareerPage {
     private SelenideElement
-            openСareer = $x("//a[@class='submenu__link'][contains(text(),'Карьера')]"),
-            vacationsQa = $(byTagAndText("span", "Вакансии BI.ZONE"));
-    public CareerPage vacationsQa(){
-        step("Открытие страницы Вакансии",() -> {
-            vacationsQa.click();
-            switchTo().window(1);
-        });
-        return this;
-    }
+            openСareer = $x("//a[@class='submenu__link'][contains(text(),'Карьера')]");
+
     public CareerPage openСareer(){
         step("Открытие страницы Карьера",() -> {
             openСareer.click();

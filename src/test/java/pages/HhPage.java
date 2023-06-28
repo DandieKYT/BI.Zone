@@ -11,6 +11,7 @@ import static io.qameta.allure.Allure.step;
 
 public class HhPage {
     private SelenideElement
+            vacationsQa = $(byTagAndText("span", "Вакансии BI.ZONE")),
             buttonVacation = $x("//*[contains(@class, 'tmpl_hh_areas__reset--dt')]"),
             checkoutVacationQa = $(byTagAndText("span", "Тестировщик"));
 
@@ -25,6 +26,13 @@ public class HhPage {
             checkoutVacationQa.shouldBe(Condition.visible);
             Selenide.closeWindow();
             switchTo().window(0);
+        });
+        return this;
+    }
+    public HhPage vacationsQa(){
+        step("Открытие страницы Вакансии",() -> {
+            vacationsQa.click();
+            switchTo().window(1);
         });
         return this;
     }

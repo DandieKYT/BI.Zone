@@ -61,7 +61,7 @@ public class BiZoneTest extends TestBase {
         mainPage.closeCookie();
         mainPage.companyHover();
         careerPage.openСareer();
-        careerPage.vacationsQa();
+        hhPage.vacationsQa();
         hhPage.buttonVacation();
         hhPage.checkoutVacationQa();
     }
