@@ -5,7 +5,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 
-public class VacationTest extends TestBase {
+public class CareerTest extends TestBase {
     @Test
     @Owner("Kudryavtsev")
     @Feature("Вакансии тестировщика на HH.ru")
