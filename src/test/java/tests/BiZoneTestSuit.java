@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 
 @Tag("remote_test")
-public class BiZoneTest extends TestBase {
+public class BiZoneTestSuit extends TestBase {
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -48,8 +48,6 @@ public class BiZoneTest extends TestBase {
         mainPage.openPage();
         vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
-
-
     }
 
     @Test
