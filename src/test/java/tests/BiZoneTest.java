@@ -34,7 +34,7 @@ public class BiZoneTest extends TestBase {
     @Tag("api_allure")
     public void productsResult() {
         mainPage.openPage();
-        mainPage.openProducts();
+        productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();
         productPage.expectedProducts();
@@ -46,7 +46,7 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
         mainPage.openPage();
-        mainPage.vkGroup();
+        vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
 
 
@@ -60,7 +60,7 @@ public class BiZoneTest extends TestBase {
         mainPage.openPage();
         mainPage.closeCookie();
         mainPage.companyHover();
-        mainPage.openСareer();
+        careerPage.openСareer();
         careerPage.vacationsQa();
         hhPage.buttonVacation();
         hhPage.checkoutVacationQa();
@@ -73,7 +73,7 @@ public class BiZoneTest extends TestBase {
     public void pdfTest() throws Exception {
         mainPage.openPage();
         mainPage.expertiseHover();
-        mainPage.materialsOpen();
+        materialsPage.materialsOpen();
         materialsPage.findBook();
         materialsPage.bookPageOpen();
         materialsPage.checkoutPDF();
