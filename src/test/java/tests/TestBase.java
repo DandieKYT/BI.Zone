@@ -18,7 +18,7 @@ public class TestBase extends Attachment {
     CareerPage careerPage = new CareerPage();
     HhPage hhPage = new HhPage();
     MaterialsPage materialsPage = new MaterialsPage();
-    ParamPage paramPage = new ParamPage();
+    CareerAndCompanyPage careerAndCompanyPage = new CareerAndCompanyPage();
     Attachment attachment = new Attachment();
     @BeforeAll
     static void setUp() {

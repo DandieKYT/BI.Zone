@@ -3,7 +3,7 @@ package pages;
 import static com.codeborne.selenide.Condition.text;
 import static io.qameta.allure.Allure.step;
 
-public class ParamPage {
+public class CareerAndCompanyPage {
     MainPage mainPage = new MainPage();
     public MainPage searchByParam(String param){
         step("Открытие верхнего меню",() -> {

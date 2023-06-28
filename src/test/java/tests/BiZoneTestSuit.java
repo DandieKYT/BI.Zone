@@ -22,9 +22,9 @@ public class BiZoneTestSuit extends TestBase {
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
         mainPage.openPage();
-        paramPage.searchByParam(param);
-        paramPage.openTitle(expectedText);
-        paramPage.checkTile(expectedText);
+        careerAndCompanyPage.searchByParam(param);
+        careerAndCompanyPage.openTitle(expectedText);
+        careerAndCompanyPage.checkTile(expectedText);
     }
 
     @Test
