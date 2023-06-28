@@ -1,7 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import io.qameta.allure.Attachment;
+import help.Attachment;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,7 +11,7 @@ import pages.*;
 import java.util.Map;
 
 
-public class TestBase {
+public class TestBase extends Attachment {
     VkPage vkPage = new VkPage();
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
@@ -19,7 +19,7 @@ public class TestBase {
     HhPage hhPage = new HhPage();
     MaterialsPage materialsPage = new MaterialsPage();
     ParamPage paramPage = new ParamPage();
-    Attachments attachment = new Attachments();
+    Attachment attachment = new Attachment();
     @BeforeAll
     static void setUp() {
     Configuration.browserSize = "1920x1080";

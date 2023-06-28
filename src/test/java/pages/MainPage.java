@@ -17,6 +17,7 @@ public class MainPage {
             expertiseHover = $(byTagAndText("span","Экспертиза")),
             companyHover = $(byTagAndText("span","Компания"));
 
+
     public MainPage vkGroup() {
         step("Открыть группу VK", () -> {
             vkGroup.click();
