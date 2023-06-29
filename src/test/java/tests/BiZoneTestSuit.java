@@ -57,7 +57,7 @@ public class BiZoneTestSuit extends TestBase {
     public void vacationQa() {
         mainPage.openPage();
         mainPage.closeCookie();
-        mainPage.companyHover();
+        careerPage.companyHover();
         careerPage.openСareer();
         hhPage.vacationsQa();
         hhPage.buttonVacation();
@@ -68,9 +68,9 @@ public class BiZoneTestSuit extends TestBase {
     @Owner("Kudryavtsev")
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
-    public void pdfTest() throws Exception {
+    public void materialsPdfTest() throws Exception {
         mainPage.openPage();
-        mainPage.expertiseHover();
+        materialsPage.expertiseHover();
         materialsPage.materialsOpen();
         materialsPage.findBook();
         materialsPage.bookPageOpen();

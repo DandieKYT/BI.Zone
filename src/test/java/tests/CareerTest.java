@@ -13,7 +13,7 @@ public class CareerTest extends TestBase {
     public void vacationQa() {
         mainPage.openPage();
         mainPage.closeCookie();
-        mainPage.companyHover();
+        careerPage.companyHover();
         careerPage.openСareer();
         hhPage.vacationsQa();
         hhPage.buttonVacation();
