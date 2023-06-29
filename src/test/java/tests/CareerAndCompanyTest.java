@@ -16,7 +16,7 @@ public class CareerAndCompanyTest extends TestBase{
     @Story("Открытие страниц Материалы и Карьера")
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
-        mainPage.openPage();
+        startTest.openPage();
         careerAndCompanyPage.searchByParam(param);
         careerAndCompanyPage.openTitle(expectedText);
         careerAndCompanyPage.checkTile(expectedText);

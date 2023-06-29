@@ -13,7 +13,7 @@ public class ProductTest extends TestBase{
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
     public void productsResult() {
-        mainPage.openPage();
+        startTest.openPage();
         productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();

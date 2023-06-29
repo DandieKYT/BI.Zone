@@ -21,7 +21,7 @@ public class BiZoneTestSuit extends TestBase {
     @Story("Открытие страниц Материалы и Карьера")
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
-        mainPage.openPage();
+        startTest.openPage();
         careerAndCompanyPage.searchByParam(param);
         careerAndCompanyPage.openTitle(expectedText);
         careerAndCompanyPage.checkTile(expectedText);
@@ -33,7 +33,7 @@ public class BiZoneTestSuit extends TestBase {
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
     public void productsResult() {
-        mainPage.openPage();
+        startTest.openPage();
         productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();
@@ -45,7 +45,7 @@ public class BiZoneTestSuit extends TestBase {
     @Feature("Переход на официальную страницу группы компании в ВК")
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
-        mainPage.openPage();
+        startTest.openPage();
         vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
     }
@@ -55,8 +55,8 @@ public class BiZoneTestSuit extends TestBase {
     @Feature("Вакансии тестировщика на HH.ru")
     @Story("Проверка вакансии на сайте")
     public void vacationQa() {
-        mainPage.openPage();
-        mainPage.closeCookie();
+        startTest.openPage();
+        startTest.closeCookie();
         careerPage.companyHover();
         careerPage.openСareer();
         careerPage.vacationsQa();
@@ -69,7 +69,7 @@ public class BiZoneTestSuit extends TestBase {
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
     public void materialsPdfTest() throws Exception {
-        mainPage.openPage();
+        startTest.openPage();
         materialsPage.expertiseHover();
         materialsPage.materialsOpen();
         materialsPage.findBook();

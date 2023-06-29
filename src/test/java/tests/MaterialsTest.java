@@ -11,7 +11,7 @@ public class MaterialsTest extends TestBase{
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
-        mainPage.openPage();
+        startTest.openPage();
         materialsPage.expertiseHover();
         materialsPage.materialsOpen();
         materialsPage.findBook();

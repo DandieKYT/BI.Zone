@@ -2,7 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import help.Attachment;
-import help.MainPage;
+import help.StartTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -14,10 +14,9 @@ import java.util.Map;
 
 public class TestBase extends Attachment {
     VkPage vkPage = new VkPage();
-    MainPage mainPage = new MainPage();
+    StartTest startTest = new StartTest();
     ProductPage productPage = new ProductPage();
     CareerPage careerPage = new CareerPage();
-    CareerHhPage careerHhPage = new CareerHhPage();
     MaterialsPage materialsPage = new MaterialsPage();
     CareerAndCompanyPage careerAndCompanyPage = new CareerAndCompanyPage();
     Attachment attachment = new Attachment();
