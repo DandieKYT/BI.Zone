@@ -59,9 +59,9 @@ public class BiZoneTestSuit extends TestBase {
         mainPage.closeCookie();
         careerPage.companyHover();
         careerPage.openСareer();
-        careerHhPage.vacationsQa();
-        careerHhPage.buttonVacation();
-        careerHhPage.checkoutVacationQa();
+        careerPage.vacationsQa();
+        careerPage.buttonVacation();
+        careerPage.checkoutVacationQa();
     }
 
     @Test
