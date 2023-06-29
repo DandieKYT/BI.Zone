@@ -17,7 +17,7 @@ public class TestBase extends Attachment {
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
     CareerPage careerPage = new CareerPage();
-    HhPage hhPage = new HhPage();
+    CareerHhPage careerHhPage = new CareerHhPage();
     MaterialsPage materialsPage = new MaterialsPage();
     CareerAndCompanyPage careerAndCompanyPage = new CareerAndCompanyPage();
     Attachment attachment = new Attachment();

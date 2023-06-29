@@ -15,8 +15,8 @@ public class CareerTest extends TestBase {
         mainPage.closeCookie();
         careerPage.companyHover();
         careerPage.openСareer();
-        hhPage.vacationsQa();
-        hhPage.buttonVacation();
-        hhPage.checkoutVacationQa();
+        careerHhPage.vacationsQa();
+        careerHhPage.buttonVacation();
+        careerHhPage.checkoutVacationQa();
     }
 }
