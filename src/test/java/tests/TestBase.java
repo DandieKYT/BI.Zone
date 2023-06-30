@@ -1,8 +1,9 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import help.Attachment;
-import help.StartTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -10,6 +11,9 @@ import pages.*;
 
 
 import java.util.Map;
+
+import static com.codeborne.selenide.Selenide.$;
+import static io.qameta.allure.Allure.step;
 
 
 public class TestBase extends Attachment {
@@ -44,5 +48,24 @@ public class TestBase extends Attachment {
             attachment.pageSource();
             attachment.addVideo();
         }
+
+    public static class StartTest {
+        private SelenideElement
+
+                closeCookie = $(".v-cookie__button > svg > path");
+
+        public StartTest closeCookie(){
+            step("Закрытие уведомления cookie",() -> {
+                closeCookie.click();
+            });
+            return this;
+        }
+        public StartTest openPage(){
+            step("Открытие сайта",() -> {
+                Selenide.open("https://bi.zone/");
+            });
+            return this;
+        }
     }
+}
 

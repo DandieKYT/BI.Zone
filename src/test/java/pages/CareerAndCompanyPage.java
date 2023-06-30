@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import help.StartTest;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byTagAndText;
@@ -12,19 +12,19 @@ import static io.qameta.allure.Allure.step;
 public class CareerAndCompanyPage {
     CareerAndCompanyLocators locators = new CareerAndCompanyLocators();
 
-    public StartTest searchByParam(String param){
+    public TestBase.StartTest searchByParam(String param){
         step("Открытие верхнего меню",() -> {
             locators.searchByParam(param).hover();
         });
         return null;
     }
-    public StartTest openTitle(String expectedText){
+    public TestBase.StartTest openTitle(String expectedText){
         step("Открытие вкладки",() -> {
             locators.openTitle(expectedText).click();
         });
         return null;
     }
-    public StartTest checkTile(String expectedText){
+    public TestBase.StartTest checkTile(String expectedText){
         step("Проверка открытия вкладки",() -> {
             locators.checkTitle(expectedText).shouldBe(text(expectedText));
         });
