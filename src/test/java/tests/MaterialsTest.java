@@ -12,6 +12,7 @@ public class MaterialsTest extends TestBase{
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
         startTest.openPage();
+        startTest.closeCookie();
         materialsPage.expertiseHover();
         materialsPage.materialsOpen();
         materialsPage.findBook();
