@@ -6,6 +6,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+
 public class CareerAndCompanyTest extends TestBase{
     @CsvSource(value = {
             "Экспертиза,         Материалы",
