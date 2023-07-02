@@ -71,6 +71,33 @@ tasks.withType(Test) {//благодаря этой строчке переда�
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
-test {
-    useJUnitPlatform()
+task BizoneTests(type: Test) {
+    useJUnitPlatform {
+        includeTags "BizoneTests"
+    }
+}
+task CareerTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "CareerTest"
+    }
+}
+task MaterialsTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "MaterialsTest"
+    }
+}
+task ProductTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "ProductTest"
+    }
+}
+task VkTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "VkTest"
+    }
+}
+task CareerAndCompanyTest(type: Test) {
+    useJUnitPlatform {
+        includeTags "CareerAndCompanyTest"
+    }
 }

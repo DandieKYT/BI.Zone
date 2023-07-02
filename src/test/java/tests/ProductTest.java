@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class ProductTest extends TestBase{
+    @Tag("BizoneTest")
+    @Tag("ProductTest")
     @Test
     @Owner("Kudryavtsev")
     @Feature("Соответствие результатов выдачи во вкладке продукты")
