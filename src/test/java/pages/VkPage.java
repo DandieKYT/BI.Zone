@@ -10,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 
 public class VkPage {
     private SelenideElement
+            vkGroup= $x("//div[normalize-space()='VK']"),
             getExpectedTitleVk = $x("//h1[normalize-space()='BI.ZONE']");
 
     public VkPage getExpectedTitleVk() {
@@ -17,6 +18,13 @@ public class VkPage {
             getExpectedTitleVk.shouldBe(text("BI.ZONE"));
             Selenide.closeWindow();
             switchTo().window(0);
+        });
+        return this;
+    }
+    public VkPage vkGroup() {
+        step("Открыть группу VK", () -> {
+            vkGroup.click();
+            switchTo().window(1);
         });
         return this;
     }

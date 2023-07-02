@@ -6,18 +6,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import pages.*;
+
 
 
 @Tag("remote_test")
-public class BiZoneTest extends TestBase {
-    VkPage vkPage = new VkPage();
-    MainPage mainPage = new MainPage();
-    ProductPage productPage = new ProductPage();
-    CareerPage careerPage = new CareerPage();
-    HhPage hhPage = new HhPage();
-    MaterialsPage materialsPage = new MaterialsPage();
-    ParamPage paramPage = new ParamPage();
+public class BiZoneTestSuit extends TestBase {
 
     @CsvSource(value = {
             "Экспертиза,         Материалы",
@@ -28,10 +21,10 @@ public class BiZoneTest extends TestBase {
     @Story("Открытие страниц Материалы и Карьера")
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
-        mainPage.openPage();
-        paramPage.searchByParam(param);
-        paramPage.openTitle(expectedText);
-        paramPage.checkTile(expectedText);
+        startTest.openPage();
+        careerAndCompanyPage.searchByParam(param);
+        careerAndCompanyPage.openTitle(expectedText);
+        careerAndCompanyPage.checkTile(expectedText);
     }
 
     @Test
@@ -40,8 +33,8 @@ public class BiZoneTest extends TestBase {
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
     public void productsResult() {
-        mainPage.openPage();
-        mainPage.openProducts();
+        startTest.openPage();
+        productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();
         productPage.expectedProducts();
@@ -52,10 +45,9 @@ public class BiZoneTest extends TestBase {
     @Feature("Переход на официальную страницу группы компании в ВК")
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
-        mainPage.openPage();
-        mainPage.vkGroup();
+        startTest.openPage();
+        vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
-
     }
 
     @Test
@@ -63,23 +55,23 @@ public class BiZoneTest extends TestBase {
     @Feature("Вакансии тестировщика на HH.ru")
     @Story("Проверка вакансии на сайте")
     public void vacationQa() {
-        mainPage.openPage();
-        mainPage.closeCookie();
-        mainPage.companyHover();
-        mainPage.openСareer();
+        startTest.openPage();
+        startTest.closeCookie();
+        careerPage.companyHover();
+        careerPage.openСareer();
         careerPage.vacationsQa();
-        hhPage.buttonVacation();
-        hhPage.checkoutVacationQa();
+        careerPage.buttonVacation();
+        careerPage.checkoutVacationQa();
     }
 
     @Test
     @Owner("Kudryavtsev")
     @Feature("Чтение и проверка содержимого PDF файла")
     @Story("Проверка PDF файла")
-    public void pdfTest() throws Exception {
-        mainPage.openPage();
-        mainPage.expertiseHover();
-        mainPage.materialsOpen();
+    public void materialsPdfTest() throws Exception {
+        startTest.openPage();
+        materialsPage.expertiseHover();
+        materialsPage.materialsOpen();
         materialsPage.findBook();
         materialsPage.bookPageOpen();
         materialsPage.checkoutPDF();
