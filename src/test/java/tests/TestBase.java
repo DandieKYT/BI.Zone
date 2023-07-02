@@ -59,7 +59,7 @@ public class TestBase extends Attachment {
         }
         public StartTest openPage(){
             step("Открытие сайта",() -> {
-                Selenide.open("https://bi.zone/");
+                Selenide.open("/");
             });
             return this;
         }
