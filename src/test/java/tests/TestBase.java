@@ -49,10 +49,7 @@ public class TestBase extends Attachment {
             attachment.addVideo();
         }
 
-    public static class StartTest {
-        private SelenideElement
-
-                closeCookie = $(".v-cookie__button > svg > path");
+    public static class StartTest extends BasePage {
 
         public StartTest closeCookie(){
             step("Закрытие уведомления cookie",() -> {
