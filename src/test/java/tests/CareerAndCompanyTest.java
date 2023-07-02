@@ -8,13 +8,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
-public class CareerAndCompanyTest extends TestBase{
+public class CareerAndCompanyTest extends TestBase {
     @Tag("BizoneTest")
     @Tag("CareerAndCompanyTest")
-    @CsvSource(value = {
-            "Экспертиза,         Материалы",
-            "Компания,             Карьера",
-    })
+    @CsvSource(value = {"Экспертиза,         Материалы", "Компания,             Карьера",})
     @Owner("Kudryavtsev")
     @Feature("Материалы и Карьера")
     @Story("Открытие страниц Материалы и Карьера")

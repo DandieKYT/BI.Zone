@@ -14,20 +14,22 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MaterialsPage {
-    private SelenideElement
-            bookPageOpen = $("#materials-7390 .research__title"),
-            materialsOpen =  $(byTagAndText("a", "Материалы")),
-            findBook = $x("//*[contains(@class, 'catalog__input')]"),
-            expertiseHover = $(byTagAndText("span","Экспертиза")),
-            file = $x("//a[@href='/upload/for_download/bi_zone_the_fundamentals_of_business_continuity_management_ru.pdf']");
+    private final SelenideElement
+            bookPageOpen = $("#materials-7390 .research__title");
+    private final SelenideElement materialsOpen = $(byTagAndText("a", "Материалы"));
+    private final SelenideElement findBook = $x("//*[contains(@class, 'catalog__input')]");
+    private final SelenideElement expertiseHover = $(byTagAndText("span", "Экспертиза"));
+    private final SelenideElement file = $x("//a[@href='/upload/for_download/bi_zone_the_fundamentals_of_business_continuity_management_ru.pdf']");
+
     public MaterialsPage checkoutPDF() throws IOException {
         File download = file.download();
         PDF pdf = new PDF(download);
         assertThat(pdf, containsText("Путь к цифровому"));
         return this;
     }
-    public MaterialsPage expertiseHover(){
-        step("Наведение курсора на название Экспертиза",() -> {
+
+    public MaterialsPage expertiseHover() {
+        step("Наведение курсора на название Экспертиза", () -> {
             expertiseHover.hover();
         });
         return this;
@@ -40,6 +42,7 @@ public class MaterialsPage {
         });
         return this;
     }
+
     public MaterialsPage bookPageOpen() {
         step("Открытие страницы с книгой", () -> {
             bookPageOpen.click();
@@ -47,14 +50,16 @@ public class MaterialsPage {
         });
         return this;
     }
+
     public MaterialsPage findBook() {
         step("Поиск книги через поиск", () -> {
             findBook.setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса").pressEnter();
         });
         return this;
     }
-    public MaterialsPage materialsOpen(){
-        step("Открытие страницы материалы",() -> {
+
+    public MaterialsPage materialsOpen() {
+        step("Открытие страницы материалы", () -> {
             materialsOpen.click();
         });
         return this;
