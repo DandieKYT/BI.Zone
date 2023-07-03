@@ -12,21 +12,21 @@ import static io.qameta.allure.Allure.step;
 public class CareerAndCompanyPage {
     CareerAndCompanyLocators locators = new CareerAndCompanyLocators();
 
-    public TestBase.StartTest searchByParam(String param) {
+    public CareerAndCompanyPage searchByParam(String param) {
         step("Открытие верхнего меню", () -> {
             locators.searchByParam(param).hover();
         });
         return null;
     }
 
-    public TestBase.StartTest openTitle(String expectedText) {
+    public CareerAndCompanyPage openTitle(String expectedText) {
         step("Открытие вкладки", () -> {
             locators.openTitle(expectedText).click();
         });
         return null;
     }
 
-    public TestBase.StartTest checkTile(String expectedText) {
+    public CareerAndCompanyPage checkTile(String expectedText) {
         step("Проверка открытия вкладки", () -> {
             locators.checkTitle(expectedText).shouldBe(text(expectedText));
         });

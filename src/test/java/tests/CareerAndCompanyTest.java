@@ -18,7 +18,6 @@ public class CareerAndCompanyTest extends TestBase {
     @ParameterizedTest
     public void careerAndCompany(String param, String expectedText) {
         basePage.openPage();
-        basePage.closeCookie();
         careerAndCompanyPage.searchByParam(param);
         careerAndCompanyPage.openTitle(expectedText);
         careerAndCompanyPage.checkTile(expectedText);
