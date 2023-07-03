@@ -15,8 +15,8 @@ public class ProductTest extends TestBase {
     @Story("Проверка вкладки работы Продукты")
     @Tag("api_allure")
     public void productsResult() {
-        startTest.openPage();
-        startTest.closeCookie();
+        basePage.openPage();
+        basePage.closeCookie();
         productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();

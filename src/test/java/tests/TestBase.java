@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase extends Attachment {
     VkPage vkPage = new VkPage();
-    StartTest startTest = new StartTest();
+    BasePage basePage = new BasePage();
     ProductPage productPage = new ProductPage();
     CareerPage careerPage = new CareerPage();
     MaterialsPage materialsPage = new MaterialsPage();
@@ -42,27 +42,10 @@ public class TestBase extends Attachment {
 
     @AfterEach
     void attachemts() {
-        browserLogs();
+        attachment.browserLogs();
         attachment.attachScreenshot();
-        pageSource();
-        addVideo();
-    }
-
-    public static class StartTest extends BasePage {
-
-        public StartTest closeCookie() {
-            step("Закрытие уведомления cookie", () -> {
-                closeCookie.click();
-            });
-            return this;
-        }
-
-        public StartTest openPage() {
-            step("Открытие сайта", () -> {
-                Selenide.open("/");
-            });
-            return this;
-        }
+        attachment.pageSource();
+        attachment.addVideo();
     }
 }
 

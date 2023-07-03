@@ -14,8 +14,8 @@ public class VkTest extends TestBase {
     @Feature("Переход на официальную страницу группы компании в ВК")
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
-        startTest.openPage();
-        startTest.closeCookie();
+        basePage.openPage();
+        basePage.closeCookie();
         vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
     }

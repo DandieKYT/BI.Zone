@@ -14,8 +14,8 @@ public class CareerTest extends TestBase {
     @Feature("Вакансии тестировщика на HH.ru")
     @Story("Проверка вакансии на сайте")
     public void vacationQa() {
-        startTest.openPage();
-        startTest.closeCookie();
+        basePage.openPage();
+        basePage.closeCookie();
         careerPage.companyHover();
         careerPage.openСareer();
         careerPage.vacationsQa();
