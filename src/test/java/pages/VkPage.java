@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selenide.switchTo;
 import static io.qameta.allure.Allure.step;
 
 public class VkPage {
-    private SelenideElement
-            vkGroup= $x("//div[normalize-space()='VK']"),
-            getExpectedTitleVk = $x("//h1[normalize-space()='BI.ZONE']");
+    private final SelenideElement
+            vkGroup = $x("//div[normalize-space()='VK']");
+    private final SelenideElement getExpectedTitleVk = $x("//h1[normalize-space()='BI.ZONE']");
 
     public VkPage getExpectedTitleVk() {
         step("Проверить содержимое страницы группы", () -> {
@@ -21,6 +21,7 @@ public class VkPage {
         });
         return this;
     }
+
     public VkPage vkGroup() {
         step("Открыть группу VK", () -> {
             vkGroup.click();

@@ -12,33 +12,37 @@ import static io.qameta.allure.Allure.step;
 public class CareerAndCompanyPage {
     CareerAndCompanyLocators locators = new CareerAndCompanyLocators();
 
-    public TestBase.StartTest searchByParam(String param){
-        step("Открытие верхнего меню",() -> {
+    public CareerAndCompanyPage searchByParam(String param) {
+        step("Открытие верхнего меню", () -> {
             locators.searchByParam(param).hover();
         });
         return null;
     }
-    public TestBase.StartTest openTitle(String expectedText){
-        step("Открытие вкладки",() -> {
+
+    public CareerAndCompanyPage openTitle(String expectedText) {
+        step("Открытие вкладки", () -> {
             locators.openTitle(expectedText).click();
         });
         return null;
     }
-    public TestBase.StartTest checkTile(String expectedText){
-        step("Проверка открытия вкладки",() -> {
+
+    public CareerAndCompanyPage checkTile(String expectedText) {
+        step("Проверка открытия вкладки", () -> {
             locators.checkTitle(expectedText).shouldBe(text(expectedText));
         });
         return null;
     }
-    public class CareerAndCompanyLocators{
-        public SelenideElement searchByParam(String param){
+
+    public class CareerAndCompanyLocators {
+        public SelenideElement searchByParam(String param) {
             return $x(String.format("//span[text()='%s']", param));
         }
 
-        public SelenideElement openTitle(String expectedText){
+        public SelenideElement openTitle(String expectedText) {
             return $(byTagAndText("a", (expectedText)));
         }
-        public SelenideElement checkTitle(String expectedText){
+
+        public SelenideElement checkTitle(String expectedText) {
             return $x(String.format("//h1[text()='%s']", expectedText));
         }
     }

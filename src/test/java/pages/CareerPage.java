@@ -9,31 +9,34 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class CareerPage {
-    private SelenideElement
-            companyHover = $(byTagAndText("span","Компания")),
-            openСareer = $x("//a[@class='submenu__link'][contains(text(),'Карьера')]"),
-            vacationsQa = $(byTagAndText("span", "Вакансии BI.ZONE")),
-            buttonVacation = $x("//*[contains(@class, 'tmpl_hh_areas__reset--dt')]"),
-            checkoutVacationQa = $(byTagAndText("span", "Тестировщик"));
+    private final SelenideElement
+            companyHover = $(byTagAndText("span", "Компания"));
+    private final SelenideElement openСareer = $x("//a[@class='submenu__link'][contains(text(),'Карьера')]");
+    private final SelenideElement vacationsQa = $(byTagAndText("span", "Вакансии BI.ZONE"));
+    private final SelenideElement buttonVacation = $x("//*[contains(@class, 'tmpl_hh_areas__reset--dt')]");
+    private final SelenideElement checkoutVacationQa = $(byTagAndText("span", "Тестировщик"));
 
-    public CareerPage openСareer(){
-        step("Открытие страницы Карьера",() -> {
+    public CareerPage openСareer() {
+        step("Открытие страницы Карьера", () -> {
             openСareer.click();
         });
         return this;
     }
-    public CareerPage companyHover(){
-        step("Наведение на название Компания",() -> {
+
+    public CareerPage companyHover() {
+        step("Наведение на название Компания", () -> {
             companyHover.hover();
         });
         return this;
     }
+
     public CareerPage buttonVacation() {
         step("Нажатие на кнопку \"Работа в BI.ZONE\"", () -> {
             buttonVacation.click();
         });
         return this;
     }
+
     public CareerPage checkoutVacationQa() {
         step("Проверка наличия вакансии \"Тестировщик\"", () -> {
             checkoutVacationQa.shouldBe(Condition.visible);
@@ -42,8 +45,9 @@ public class CareerPage {
         });
         return this;
     }
-    public CareerPage vacationsQa(){
-        step("Открытие страницы Вакансии",() -> {
+
+    public CareerPage vacationsQa() {
+        step("Открытие страницы Вакансии", () -> {
             vacationsQa.click();
             switchTo().window(1);
         });
