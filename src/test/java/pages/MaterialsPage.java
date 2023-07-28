@@ -14,8 +14,7 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MaterialsPage {
-    private final SelenideElement
-            bookPageOpen = $("#materials-7390 .research__title");
+    private final SelenideElement bookPageOpen = $x("//*[contains(@class, 'research__image')]/img");
     private final SelenideElement materialsOpen = $(byTagAndText("a", "Материалы"));
     private final SelenideElement findBook = $x("//*[contains(@class, 'catalog__input')]");
     private final SelenideElement expertiseHover = $(byTagAndText("span", "Экспертиза"));
@@ -53,7 +52,8 @@ public class MaterialsPage {
 
     public MaterialsPage findBook() {
         step("Поиск книги через поиск", () -> {
-            findBook.setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса").pressEnter();
+            findBook.setValue("Путь к цифровому лидерству. Основы управления непрерывностью бизнеса");
+            Selenide.sleep(2000);
         });
         return this;
     }

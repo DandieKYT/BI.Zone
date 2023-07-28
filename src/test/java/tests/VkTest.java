@@ -15,7 +15,6 @@ public class VkTest extends TestBase {
     @Story("Проверка соответствия группы с названием")
     public void groupLinks() {
         basePage.openPage();
-        basePage.closeCookie();
         vkPage.vkGroup();
         vkPage.getExpectedTitleVk();
     }

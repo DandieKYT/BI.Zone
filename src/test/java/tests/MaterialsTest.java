@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -15,7 +16,6 @@ public class MaterialsTest extends TestBase {
     @Story("Проверка PDF файла")
     public void pdfTest() throws Exception {
         basePage.openPage();
-        basePage.closeCookie();
         materialsPage.expertiseHover();
         materialsPage.materialsOpen();
         materialsPage.findBook();

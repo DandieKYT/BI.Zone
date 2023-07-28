@@ -16,7 +16,6 @@ public class ProductTest extends TestBase {
     @Tag("api_allure")
     public void productsResult() {
         basePage.openPage();
-        basePage.closeCookie();
         productPage.openProducts();
         productPage.checkBoxLocal();
         productPage.checkBoxHome();
